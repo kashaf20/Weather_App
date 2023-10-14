@@ -1,7 +1,7 @@
 const data = {
     title: "Weather App",
     text: "Weather App",
-    url: "file:///C:/Users/kashaf/OneDrive/Desktop/project/weather/Weather%20App/index.html"
+    url: "https://kashaf20.github.io/Weather_App/"
 };
 if (navigator.canShare && navigator.canShare(data)) {
     navigator.share(data);
@@ -9,7 +9,7 @@ if (navigator.canShare && navigator.canShare(data)) {
     //not supported!
 }
 // Import modules using ES6 syntax
-import { api, greet } from './App.js';
+import { api } from './App.js';
 
 greet(); // Call the function from the imported module
 const inputBox = document.querySelector('.input-box');
@@ -37,7 +37,6 @@ async function checkWeather(city) {
     console.log("run");
     location_not_found.style.display = "none";
     wd.style.display = "flex";
-    // console.log(weather_data);
 
     temperature.innerHTML = `${Math.round(weather_data.main.temp - 273.15)}°C`;
     description.innerHTML = `${weather_data.weather[0].description}`;
