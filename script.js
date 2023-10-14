@@ -11,7 +11,6 @@ if (navigator.canShare && navigator.canShare(data)) {
 // Import modules using ES6 syntax
 import { api } from './App.js';
 
-greet(); // Call the function from the imported module
 const inputBox = document.querySelector('.input-box');
 const searchBtn = document.getElementById('searchBtn');
 const Weather_img = document.querySelector('.Weather-img');
