@@ -1,13 +1,3 @@
-const data = {
-    title: "Weather App",
-    text: "Weather App",
-    url: "https://kashaf20.github.io/Weather_App/"
-};
-if (navigator.canShare && navigator.canShare(data)) {
-    navigator.share(data);
-} else {
-    //not supported!
-}
 // Import modules using ES6 syntax
 import { api } from './App.js';
 
@@ -20,8 +10,6 @@ const humidity = document.getElementById('humidity');
 const wind_speed = document.getElementById('wind_speed');
 const location_not_found = document.querySelector('.location-not-found');
 const wd = document.querySelector('.wether-body');
-const temp_min = document.getElementById('temp_min');
-const temp_max = document.getElementById('temp_max');
 
 async function checkWeather(city) {
     const api_key = api
@@ -33,7 +21,7 @@ async function checkWeather(city) {
         wd.style.display = "none";
         return;
     }
-    console.log("run");
+    // console.log("run");
     location_not_found.style.display = "none";
     wd.style.display = "flex";
 
@@ -41,8 +29,6 @@ async function checkWeather(city) {
     description.innerHTML = `${weather_data.weather[0].description}`;
     humidity.innerHTML = `${weather_data.main.humidity}%`;
     wind_speed.innerHTML = `${weather_data.wind.speed}Km/H`;
-    temp_min.innerHTML = `${Math.round(weather_data.main.temp_min - 274.15)}°C`;
-    temp_max.innerHTML = `${Math.round(weather_data.main.temp_max - 272.15)}°C`;
 
     switch (weather_data.weather[0].main) {
         case 'Clouds':
@@ -75,7 +61,12 @@ async function checkWeather(city) {
             break;
     }
 }
+inputBox.addEventListener("keyup", (ev) => {
+    if (ev.keyCode === 13) {
+        checkWeather(inputBox.value);
+    }
 
+});
 searchBtn.addEventListener('click', () => {
     checkWeather(inputBox.value);
 });

@@ -10,12 +10,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #252525;
+    background-color: #6272ef;
 }
 .inner-container{
     width: 390px;
     height: min-content;
-    background-color: #687aad;
+    background-color: rgba(255, 255, 255, 0.136);
+    backdrop-filter: blur(10px);
     border-radius: 25px;
     padding: 14px;
     margin: 10px;
@@ -155,7 +156,7 @@
 }
 .location-not-found h1{
     font-size: 20px;
-    color: #6b6b6b;
+    color: #000000;
     margin-block-end: 15px;
 }
 .location-not-found img{
