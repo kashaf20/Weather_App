@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="./img/favicon.png">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="outer-container">
+    <div class="inner-container">
+      <div class="haider">
+        <div class="search-box">
+          <input type="text" placeholder="Enter your Location" class="input-box">
+          <button class="fa-solid fa-magnifying-glass" id="searchBtn"></button>
+        </div>
+      </div>
+
+      <div class="location-not-found">
+        <h1>Sorry, location not found!!!</h1>
+        <img src="./img/4O4 Page.gif" alt=" ">
+      </div>
+
+      <div class="wether-body">
+        <img src="./img/Clouds.jpeg" alt="Weather" class="Weather-img">
+        <div class="weather-box">
+          <p class="temperature">0<sup>°C</sup></p>
+          <p class="description">Light rain</p>
+        </div>
+
+        <!-- <div class="temp-details">
+
+          <div class="temp-min">
+            <i class="fa-solid fa-arrow-right fa-rotate-90"></i>
+            <div class="text">
+              <span id="temp_min">0<sup>°C</sup></span>
+              <p>Temp-min</p>
+            </div>
+          </div>
+          <div class="temp-max">
+            <i class="fa-solid fa-arrow-right fa-rotate-270"></i>
+            <div class="text">
+              <span id="temp_max">0<sup>°C</sup></span>
+              <p>Temp-max</p>
+            </div>
+          </div>
+        </div> -->
+        <div class="weather-details">
+
+          <div class="humidity">
+            <i class="fa-sharp fa-solid fa-droplet"></i>
+            <div class="text">
+              <span id="humidity">45%</span>
+              <p>Humidity</p>
+            </div>
+          </div>
+          <div class="wind">
+            <i class="fa-solid fa-wind"></i>
+            <div class="text">
+              <span id="wind_speed">45%</span>
+              <p>Wind Speed</p>
+            </div>
+          </div>
+        </div>
+        <div id="footer">Created by <a href="https://github.com/kashaf20/Weather_App">@Kashaf20
+            &nbsp;<i class="fa-brands fa-github"></i></a></div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <script type="module" src="script.js"></script>
+  <script type="module" src="App.js"></script>
+  <script src="https://kit.fontawesome.com/f256b69bc3.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
