@@ -1,5 +1,5 @@
 // Import modules using ES6 syntax
-import { api } from './App.js';
+// import { api } from './App.js';
 
 const inputBox = document.querySelector('.input-box');
 const searchBtn = document.getElementById('searchBtn');
@@ -12,9 +12,11 @@ const location_not_found = document.querySelector('.location-not-found');
 const wd = document.querySelector('.wether-body');
 
 async function checkWeather(city) {
-    const api_key = api
+    const api_key = "49f030085ff4e92296bc0e977ff85122";
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}`;
-    const weather_data = await fetch(`${url}`).then(response => response.json());
+    const weather_data = await fetch(`${url}`).then(response => response.json())
+    .catch(error => console.error("Fetch Error:", error));
+    
 
     if (weather_data.cod === `404`) {
         location_not_found.style.display = "flex";
